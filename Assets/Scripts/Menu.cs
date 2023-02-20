@@ -74,7 +74,7 @@ public class Menu : MonoBehaviour
         {
             logic = 0;
             musicSlider.interactable = false;
-            mixer.SetFloat(MIXER_MUSIC, -79);
+            mixer.SetFloat(MIXER_MUSIC, -80);
         }
     }
     public void LoadGame()
