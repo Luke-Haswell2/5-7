@@ -1,26 +1,33 @@
 using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
-    public Sound[] sounds;
+    [SerializeField] AudioMixer mixer;
+    public static AudioManager instance;
+    public const string MUSIC_KEY = "musicVolume";
+    public const string SFX_KEY = "sfxVolume";
 
     void Awake()
     {
-        foreach (Sound s in sounds)
+        if (instance == null)
         {
-            s.source = gameObject.AddComponent<AudioSource>();
-            s.source.clip = s.clip;
-
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
+            instance = this;
+            DontDestroyOnLoad(gameObject);
         }
+        else
+        {
+            Destroy(gameObject);
+        } 
+        LoadVolume(); 
     }
-
-    public void Play(string name)
+    void LoadVolume()
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
-        s.source.Play();
+        float musicVolume = PlayerPrefs.GetFloat(MUSIC_KEY, 1f);
+        float sfxVolume = PlayerPrefs.GetFloat(SFX_KEY, 1f);
+        mixer.SetFloat(Menu.MIXER_MUSIC, MathF.Log10(musicVolume) * 20);
+        mixer.SetFloat(Menu.MIXER_SFX, MathF.Log10(sfxVolume) * 20);
     }
 }
