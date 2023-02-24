@@ -8,59 +8,33 @@ using UnityEngine.Audio;
 
 public class Menu : MonoBehaviour
 {
-    [SerializeField] AudioMixer mixer;
+    [SerializeField] AudioMixer mixerMusic;
+    [SerializeField] AudioMixer mixerSFX;
     [SerializeField] Slider musicSlider;
     [SerializeField] Slider sfxSlider;
 
-    public const string MIXER_MUSIC = "MusicVolume";
-    public const string MIXER_SFX = "SFXVolume";
+    public string MIXER_MUSIC = "MusicVolume";
+    public string MIXER_SFX = "SFXVolume";
 
-    public AudioSource[] audios_Music;
-    public AudioSource[] audios_SFX;
     public Toggle musictoggle;
 
-    
-    void Awake()
+    void Start()
     {
-        musicSlider.onValueChanged.AddListener(SetMusicVolume);
-        sfxSlider.onValueChanged.AddListener(SetSFXVolume);
-    }
-    void start()
-    {
-        musicSlider.value = PlayerPrefs.GetFloat(AudioManager.MUSIC_KEY, 1f);
-        sfxSlider.value = PlayerPrefs.GetFloat(AudioManager.SFX_KEY, 1f);
-    }
-    void OnDisable()
-    {
-     PlayerPrefs.SetFloat(AudioManager.MUSIC_KEY, musicSlider.value);
-     PlayerPrefs.SetFloat(AudioManager.SFX_KEY, sfxSlider.value);
-    }
-    void SetMusicVolume(float value)
-    {
-        mixer.SetFloat(MIXER_MUSIC, Mathf.Log10(value) * 20);
+        SetVolumeMusic(PlayerPrefs.GetFloat(MIXER_MUSIC));
+        SetVolumeSFX(PlayerPrefs.GetFloat(MIXER_SFX));
     }
 
-    void SetSFXVolume(float value)
-    {
-        mixer.SetFloat(MIXER_SFX, Mathf.Log10(value) * 20);
-    }
     public void SetVolumeMusic(float volume)
     {
         musicSlider.value = volume;
 
-        foreach (AudioSource audio in audios_Music)
-        {
-            audio.volume = musicSlider.value;
-        }
+        mixerMusic.SetFloat("Volume", volume);
     }
     public void SetVolumeSFX(float volume)
     {
         sfxSlider.value = volume;
 
-        foreach (AudioSource audio in audios_SFX)
-        {
-            audio.volume = sfxSlider.value;
-        }
+        mixerSFX.SetFloat("Volume", volume);
     }
     public void ToggleMusic(int logic)
     {
@@ -68,13 +42,13 @@ public class Menu : MonoBehaviour
         {
             logic = 1;
             musicSlider.interactable = true;
-            SetMusicVolume(PlayerPrefs.GetFloat(AudioManager.MUSIC_KEY));
+            SetVolumeMusic(0.5f);
         }
         else if (musictoggle.isOn == false)
         {
             logic = 0;
             musicSlider.interactable = false;
-            mixer.SetFloat(MIXER_MUSIC, -80);
+            SetVolumeMusic(-50);
         }
     }
     public void LoadGame()
