@@ -4373,7 +4373,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1279777234}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 123379949}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1279777234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8012,7 +8024,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 488584, guid: b0ad42c496536b34ba2c5285bc5de2de, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.2
+      value: 2.3377202
       objectReference: {fileID: 0}
     - target: {fileID: 488584, guid: b0ad42c496536b34ba2c5285bc5de2de, type: 3}
       propertyPath: m_LocalScale.y
@@ -8020,7 +8032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 488584, guid: b0ad42c496536b34ba2c5285bc5de2de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.72
+      value: 12.0977
       objectReference: {fileID: 0}
     - target: {fileID: 488584, guid: b0ad42c496536b34ba2c5285bc5de2de, type: 3}
       propertyPath: m_LocalPosition.y
