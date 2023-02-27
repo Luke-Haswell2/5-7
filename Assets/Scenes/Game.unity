@@ -221,11 +221,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 477288, guid: 7a7d36b942d98794093b0981c068db1b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.37
+      value: 9.419999
       objectReference: {fileID: 0}
     - target: {fileID: 477288, guid: 7a7d36b942d98794093b0981c068db1b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.7611008
+      value: 2.92
       objectReference: {fileID: 0}
     - target: {fileID: 477288, guid: 7a7d36b942d98794093b0981c068db1b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -404,11 +404,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 488584, guid: b0ad42c496536b34ba2c5285bc5de2de, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 488584, guid: b0ad42c496536b34ba2c5285bc5de2de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19
+      value: 18.05
       objectReference: {fileID: 0}
     - target: {fileID: 488584, guid: b0ad42c496536b34ba2c5285bc5de2de, type: 3}
       propertyPath: m_LocalPosition.y
@@ -595,7 +595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 479428, guid: 82af030887cf1354cb58c44a0ede7208, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.37
+      value: 16.42
       objectReference: {fileID: 0}
     - target: {fileID: 479428, guid: 82af030887cf1354cb58c44a0ede7208, type: 3}
       propertyPath: m_LocalPosition.y
@@ -650,7 +650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 488584, guid: b0ad42c496536b34ba2c5285bc5de2de, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 488584, guid: b0ad42c496536b34ba2c5285bc5de2de, type: 3}
       propertyPath: m_LocalScale.x
@@ -658,7 +658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 488584, guid: b0ad42c496536b34ba2c5285bc5de2de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: -1.9500008
       objectReference: {fileID: 0}
     - target: {fileID: 488584, guid: b0ad42c496536b34ba2c5285bc5de2de, type: 3}
       propertyPath: m_LocalPosition.y
@@ -725,11 +725,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 477288, guid: 7a7d36b942d98794093b0981c068db1b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.5758088
+      value: -4.5258093
       objectReference: {fileID: 0}
     - target: {fileID: 477288, guid: 7a7d36b942d98794093b0981c068db1b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.7611008
+      value: 2.92
       objectReference: {fileID: 0}
     - target: {fileID: 477288, guid: 7a7d36b942d98794093b0981c068db1b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -858,7 +858,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1443877790
 GameObject:
@@ -1237,11 +1237,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 488584, guid: b0ad42c496536b34ba2c5285bc5de2de, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 488584, guid: b0ad42c496536b34ba2c5285bc5de2de, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9
+      value: 8.049999
       objectReference: {fileID: 0}
     - target: {fileID: 488584, guid: b0ad42c496536b34ba2c5285bc5de2de, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1300,7 +1300,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 479428, guid: 82af030887cf1354cb58c44a0ede7208, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.39
+      value: 2.4399993
       objectReference: {fileID: 0}
     - target: {fileID: 479428, guid: 82af030887cf1354cb58c44a0ede7208, type: 3}
       propertyPath: m_LocalPosition.y
