@@ -24,7 +24,11 @@ public class Menu : MonoBehaviour
         SetVolumeMusic(PlayerPrefs.GetFloat(MIXER_MUSIC));
         SetVolumeSFX(PlayerPrefs.GetFloat(MIXER_SFX));
     }
-
+    void Update()
+    {
+        PlayerPrefs.SetFloat(MIXER_MUSIC, musicSlider.value);
+        PlayerPrefs.SetFloat(MIXER_SFX, sfxSlider.value);
+    }
     public void SetVolumeMusic(float volume)
     {
         musicSlider.value = volume;
